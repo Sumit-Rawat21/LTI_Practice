@@ -18,10 +18,10 @@ const routes: Routes = [
 {path:'Iclaim',component:IclaimComponent},
 {path:'Icalc',component:IcalcComponent},
 {path:'login',component:LoginComponent},
-{path:'user',component:UserComponent},
-{path:'admin',component:AdminComponent},
+{path:'user/:email',component:UserComponent},
+{path:'admin/:email',component:AdminComponent},
 {path:'Ibuy/vdetails/:email',component:VehicleDetailsComponent},
-{path:'/Ibuy/vdetails/:email/:regno',component:PlansComponent}
+{path:'Ibuy/vdetails/:email/:regno',component:PlansComponent}
 ];
 
 @NgModule({
