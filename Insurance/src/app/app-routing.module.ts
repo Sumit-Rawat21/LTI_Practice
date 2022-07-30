@@ -20,8 +20,8 @@ const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'user',component:UserComponent},
 {path:'admin',component:AdminComponent},
-{path:'Ibuy/vdetails',component:VehicleDetailsComponent},
-{path:'Ibuy/vdetails/plans',component:PlansComponent}
+{path:'Ibuy/vdetails/:email',component:VehicleDetailsComponent},
+{path:'/Ibuy/vdetails/:email/:regno',component:PlansComponent}
 ];
 
 @NgModule({
