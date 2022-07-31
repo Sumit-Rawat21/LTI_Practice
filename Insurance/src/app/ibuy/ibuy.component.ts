@@ -12,7 +12,7 @@ export class IbuyComponent implements OnInit {
   cpass:string=''
   customer:Customer={name:'',
     email:'',
-    contactNumber:0,
+    contactNumber:'',
     address:'',
     dateOfBirth:new Date(1000, 0, 0, 0, 0, 0, 0),
     password:''}

@@ -17,6 +17,13 @@ export class CustomerService {
     userlogin(email:string,pass:string):Observable<Customer>{
       return this.httpclient.get<Customer>(this.url+"Login/"+email).pipe(catchError(this.handleError))
     }
+    getUser(email:string):Observable<Customer>{
+      return this.httpclient.get<Customer>(this.url+"Get/"+email).pipe(catchError(this.handleError))
+    }
+    editUser(customer:Customer):Observable<Customer>{
+      return this.httpclient.put<Customer>(this.url+"resetpass/"+customer.email,customer,this.httpOptions)
+    }
+
     handleError(error:HttpErrorResponse){
       let errorMessage='';
       errorMessage=error.status+'\n'+error.statusText+'\n'+error.error;

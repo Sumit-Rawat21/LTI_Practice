@@ -16,6 +16,10 @@ export class VehicleService {
    addVehicle(vehicle:Ivehicle,email:string):Observable<Ivehicle>{
      return this.httpClient.post<Ivehicle>(this.url+email,vehicle,this.httpOptions).pipe(catchError(this.HandleError))
    }
+
+   getvehicle(registration_number:string):Observable<Ivehicle>{
+    return this.httpClient.get<Ivehicle>(this.url+'Get/'+registration_number).pipe(catchError(this.HandleError))
+   }
  
    HandleError(error:HttpErrorResponse){
      let errormessage=''

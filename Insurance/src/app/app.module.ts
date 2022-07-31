@@ -16,7 +16,9 @@ import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { PlansComponent } from './plans/plans.component';
-
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import {RecaptchaModule} from 'ng-recaptcha';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,13 +32,16 @@ import { PlansComponent } from './plans/plans.component';
     UserComponent,
     AdminComponent,
     VehicleDetailsComponent,
-    PlansComponent
+    PlansComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

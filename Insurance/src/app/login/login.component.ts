@@ -26,4 +26,12 @@ export class LoginComponent implements OnInit {
   })
     }
   }
+
+   forgetpass(){
+    this.router.navigate(['forget'])
+   }
+   resetpass(){
+    this.router.navigate(['reset'])
+   }
+
 }
